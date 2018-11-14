@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn Flexbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+    
+        *{
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0;
+            
+            
+        }
+
+        .banner{
+            background: url("img/bg.jpg");
+            width: 100%;
+            background-size: cover;
+        }
+
+        .top-bar{
+            background-color: #000;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .logo{
+            color: #fff;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            font-size: 40px;
+            padding: 18px;
+            text-transform: uppercase;
+        }
+
+        .logo img{
+            width: 90px;
+            height: 40px;
+        }
+
+        .menu{
+            -webkit-box-flex: 3;
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+        }
+
+        .menu ul{
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            list-style-type: none;
+            margin-top: 30px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+        }
+
+        .menu ul li{
+            flex: 1;
+            text-align: center;
+            /* border: 1px solid white; */
+        }
+
+        .menu ul li:hover{
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .menu ul li a {
+            color: #fff;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        /* BANNER */
+
+        .banner-text{
+            display: flex;
+            padding: 15% 0;
+        }
+
+        .banner-text-items{
+            color: #fff;
+            margin: auto;
+            text-align: center;
+            /* width: 50%; */
+        }
+
+        .banner-text-items h2{
+            font-size: 3em;
+            margin-bottom: 30px; 
+            text-transform: uppercase;
+        }
+
+        .banner-text-items p{
+            width: 50%;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* MAIN CONTENT */
+
+        .main-content{
+            display: flex;
+            flex-flow: row wrap;
+            padding: 5% 0;
+        }
+
+        .main1{
+            flex: 1;
+            padding: 3% 0;
+            text-align: center;
+        } 
+
+        /* CONTACT */
+
+        .contact-items{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contact{
+            background: url("img/bgg.jpg");
+            background-size: cover;
+            padding: 80px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact:before{
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .contact-items h2{
+            color: #fff;
+            font-size: 40px;
+            margin-bottom: 18px;
+        }
+
+        .contact-items input[type="text"]{
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
+            width: 50%;
+        }
+
+        .contact-items textarea{
+            border-radius: 10px;
+            height: 150px;
+            padding: 15px;
+            width: 50%;
+        }
+
+        .contact-items a{
+            text-decoration: none;
+            background-color: #da4b29;
+            opacity: 0.80;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 10px 70px;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .contact-items a:hover{
+            background-color: #da2933 ;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="logo"><a href="#"><img src="img/ivn.png"></a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#main">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-text">
+            <div class="banner-text-items">
+                <h2>Ivan Yufen Stefanus</h2>
+                <p>Hi! Welcome to my portfolio site. Let me introduce myself. I'm a fresh graduate from Binus University majoring Computer Science and Purwadhika Start Up and Coding School Web & Mobile Developer Program. I can do Web Development both Front-End and Back-End. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content" id="main">
+        <div class="main1">
+            <h2>Main Heading One</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias labore unde voluptatem ipsum repudiandae temporibus excepturi adipisci tempore rem, est omnis dolore quas ad qui? Dolores nemo debitis excepturi!</p>
+        </div>
+        <div class="main1">
+            <h2>Main Heading Two</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias labore unde voluptatem ipsum repudiandae temporibus excepturi adipisci tempore rem, est omnis dolore quas ad qui? Dolores nemo debitis excepturi!</p>
+        </div>
+        <div class="main1">
+            <h2>Main Heading Three</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestias labore unde voluptatem ipsum repudiandae temporibus excepturi adipisci tempore rem, est omnis dolore quas ad qui? Dolores nemo debitis excepturi!</p>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="contact-text">
+            <div class="contact-items">
+                <h2>Contact Us</h2>
+                <input type="text" placeholder="Your Name...">
+                <input type="text" placeholder="Your Email...">
+                <textarea cols="20" rows="20" placeholder="Your message here.."></textarea>
+                <a href="#">Submit</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
